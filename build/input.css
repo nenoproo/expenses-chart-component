@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+    --color-softRed: hsl(10, 79%, 65%);
+    --color-cyan: hsl(186, 34%, 60%);
+    --color-darkBrown: hsl(25, 47%, 15%);
+    --color-mediumBrown: hsl(28, 10%, 53%);
+    --color-cream: hsl(27, 66%, 92%);
+    --color-veryPaleOrange: hsl(33, 100%, 98%);
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+button:hover .chart-bar-point {
+    opacity: 0.5;
+}
+
+@keyframes growHeight {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--bar-height);
+    }
+}
+
+.chart-bar-point {
+    animation: growHeight 1.5s ease-out;
+}

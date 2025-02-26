@@ -8,7 +8,7 @@
   },
   "scripts": {
     "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
-    "build": "tailwindcss -i src/input.css -o build/output.css --minify",
+    "build": "tailwindcss -i src/input.css -o build/output.css --minify && copyfiles -u 1 'src/index.html' 'src/script.js' 'src/images/**/*' build/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
