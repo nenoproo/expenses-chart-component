@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <title>Expenses Chart Component</title>
+</head>
+<script type="module" src="script.js"></script>
+
+<body class="grid min-h-screen p-4 text-lg bg-cream place-items-center">
+    <main class="grid gap-4 w-full md:max-w-[480px]">
+        <div class="flex items-center justify-between p-4 rounded-lg bg-softRed md:p-6">
+            <div class="grid gap-1">
+                <h2 class="text-sm text-cream">My balance</h2>
+                <p class="font-bold text-white text-[22px]">$921.48</p>
+            </div>
+            <svg width="58" height="39" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                    <circle fill="#382314" cx="48" cy="24" r="24" />
+                    <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="grid w-full gap-6 px-4 py-5 bg-white rounded-lg">
+            <h1 class="text-[23px] font-bold px-2 md:px-4 text-darkBrown md:text-3xl">Spending - Last 7 days</h1>
+
+            <div class="flex items-end justify-between gap-3 px-2 mt-10 h-50 md:gap-4 md:px-4">
+                <button class="relative grid self-end flex-1 gap-3 hover:cursor-pointer" aria-label="Monday's spending was $17.45">
+                    <div class="w-full rounded-md chart-bar-point bg-softRed" style="--bar-height: 44px; height: var(--bar-height);"></div>
+                    <p class="text-xs text-mediumBrown">mon</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+
+                <button class="relative grid flex-1 gap-3 hover:cursor-pointer" aria-label="Tuesday's spending was $34.91">
+                    <div class="w-full rounded-md chart-bar-point bg-softRed" style="--bar-height: 84px; height: var(--bar-height)"></div>
+                    <p class="text-xs text-mediumBrown">tue</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+
+                <button class="relative grid flex-1 gap-3 hover:cursor-pointer" aria-label="Wednesday's spending was $52.36">
+                    <div class="w-full rounded-md chart-bar-point bg-cyan" style="--bar-height: 136px; height: var(--bar-height);"></div>
+                    <p class="text-xs text-mediumBrown">wed</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+
+                <button class="relative grid flex-1 gap-3 hover:cursor-pointer" aria-label="Thursday's spending was $31.07">
+                    <div class="w-full rounded-md chart-bar-point bg-softRed" style="--bar-height: 80px; height: var(--bar-height)"></div>
+                    <p class="text-xs text-mediumBrown">thu</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+
+                <button class="relative grid flex-1 gap-3 hover:cursor-pointer" aria-label="Friday's spending was $23.39">
+                    <div class="w-full rounded-md chart-bar-point bg-softRed" style="--bar-height: 60px; height: var(--bar-height);"></div>
+                    <p class="text-xs text-mediumBrown">fri</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+
+                <button class="relative grid flex-1 gap-3 hover:cursor-pointer" aria-label="Saturday's spending was $43.28">
+                    <div class="w-full rounded-md chart-bar-point bg-softRed" style="--bar-height: 112px; height: var(--bar-height)"></div>
+                    <p class="text-xs text-mediumBrown">sat</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+
+                <button class="relative grid flex-1 gap-3 hover:cursor-pointer" aria-label="Sunday's spending was $25.48">
+                    <div class="w-full h-16 rounded-md chart-bar-point bg-softRed" style="--bar-height: 64px; height: var(--bar-height);"></div>
+                    <p class="text-xs text-mediumBrown">sun</p>
+                    <div class="absolute z-10 hidden p-2 text-white -translate-x-1/2 rounded-md day-price-label -top-14 left-1/2 bg-darkBrown"></div>
+                </button>
+            </div>
+
+            <div class="h-[3px] w-full bg-veryPaleOrange"></div>
+
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-mediumBrown">Total this month</p>
+                    <p class="text-darkBrown text-[27px] font-bold">$478.33</p>
+                </div>
+                <div class="mt-5">
+                    <p class="text-darkBrown font-bold text-sm text-right -mb-0.5">+2.4%</p>
+                    <p class="text-sm text-mediumBrown">from last month</p>
+                </div>   
+            </div>
+        </div>
+    </main>
+    <div class="text-sm">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.nenadprokopiev.com" target="_blank" class="text-blue-500">Ne$hko</a>.
+      </div>
+</body>
+
+</html>
